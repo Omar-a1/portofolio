@@ -143,7 +143,7 @@ nextjs-portal,
   max-width: 787px;
   background-color: rgba(13, 13, 13, 0.95);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* -webkit-backdrop-filter: blur(12px); */
   border-radius: 30px;
   padding: 10px;
   display: flex;
@@ -476,7 +476,7 @@ nextjs-portal,
 }
 
 .tech-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   background-color: var(--bg-card-hover);
   box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.4);
 }
@@ -537,8 +537,8 @@ nextjs-portal,
 
 .tech-badge:hover {
   /* background-color: var(--accent-purple-start); */
-  border-color: var(--accent-purple-end);
-  transform: scale(1.07);
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
 }
 
 .tech-badge-dot {
@@ -619,13 +619,14 @@ nextjs-portal,
 .project-img-wrapper {
   position: relative;
   border-radius: 28px;
+  border: var(--bg-card-hover) solid 4px; 
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .project-card:hover .project-img-wrapper {
-  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
 .project-card-title {
