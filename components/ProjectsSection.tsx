@@ -1,81 +1,129 @@
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
 
 export interface ProjectItem {
   id: string;
+  num: string;
   title: string;
   category: string;
-  url: string;
+  problemSolved: string;
+  tags: string[];
+  demoUrl: string;
+  githubUrl: string;
   image: string;
-  width: number;
-  height: number;
 }
 
-const projectsData: ProjectItem[] = [
+const projectsList: ProjectItem[] = [
   {
     id: "zakker",
-    title: "مشروع ذكّر",
-    category: "مشروع ديني",
-    url: "https://zakkerr.vercel.app",
+    num: "01",
+    title: "مشروع ذكّر — تطبيق الأذكار والأدعية اليومية",
+    category: "تطبيق ويب ديني متكامل",
+    problemSolved:
+      "توفير بيئة هادئة وبسيطة لقراءة ومتابعة الورد والأذكار اليومية بدون إعلانات مزعجة أو تشويش بصري، مع دعم التصفح السريع والعمل دون انقطاع.",
+    tags: ["Html", "Css","Java script", "Pure CSS", "Responsive"],
+    demoUrl: "https://zakkerr.vercel.app",
+    githubUrl: "https://github.com/3ommar-a/zakker",
     image: "/images/project-zakker.png",
-    width: 160,
-    height: 160,
   },
   {
     id: "customers",
-    title: "مشروع تنظيم عملاء",
-    category: "مشروع تنظيم",
-    url: "https://mycustomers.vercel.app",
+    num: "02",
+    title: "منصة تنظيم العملاء — Customers CRM",
+    category: "نظام إدارة بيانات ومتابعة أعمال",
+    problemSolved:
+      "تنظيم سجلات العملاء والحالات والمهام في لوحة تحكم واحدة وسريعة، مما يقلل الوقت الضائع في المتابعات اليدوية ويزيد من دقة تتبع البيانات.",
+    tags: ["JavaScript", "Node.js", "Express", "Database (Mongo DB)"],
+    demoUrl: "https://mycustomers.vercel.app",
+    githubUrl: "https://github.com/3ommar-a/mycustomers",
     image: "/images/project-customers.png",
-    width: 250,
-    height: 160,
   },
   {
     id: "engz",
-    title: "مشروع انجز",
-    category: "صفحة هبوط (تجريبية)",
-    url: "https://engz-app.vercel.app",
+    num: "03",
+    title: "منصة إنجز — Landing Page",
+    category: "صفحة هبوط رقمية عالية التحويل",
+    problemSolved:
+      "صياغة صفحة هبوط تفاعلية لمنتج تقني توضح القيمة الجوهرية للخدمة وتشجع الزوار على اتخاذ الإجراء من خلال تجربة تصفح سلسة ومقنعة.",
+    tags: ["Html", "UI/UX", "Interactive Web","Css", "Performance"],
+    demoUrl: "https://engz-app.vercel.app",
+    githubUrl: "https://github.com/3ommar-a/engz-landing",
     image: "/images/project-engz.png",
-    width: 250,
-    height: 160,
   },
 ];
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="projects-section">
-      <h2 className="projects-title">. مشاريعي .</h2>
+    <section id="projects" className="editorial-section">
+      <div className="site-container">
+        <div className="section-label-bar">
+          <span className="section-index-num">03 //</span>
+          <span className="section-label-text">أعمال مختارة</span>
+        </div>
 
-      <div className="projects-grid">
-        {projectsData.map((project) => (
-          <div key={project.id} className="project-card">
-            <div
-              className="project-img-wrapper"
-              style={{ width: `${project.width}px`, height: `${project.height}px` }}
-            >
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="hero-photo-img"
-              />
-            </div>
+        <h2 className="section-heading-main">المشاريع المنفذة</h2>
+        <p className="section-lead-text">
+          أمثلة واقعية على تطبيقات وأنظمة قمت بتطويرها لحل مشكلات فعلية وتقديم قيمة حقيقية للمستخدمين.
+        </p>
 
-            <h3 className="project-card-title">{project.title}</h3>
-            <p className="project-card-category">{project.category}</p>
+        <div className="projects-editorial-list">
+          {projectsList.map((project) => (
+            <article key={project.id} className="project-editorial-row">
+              {/* Project Visual Preview */}
+              <div className="project-preview-box">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 860px) 100vw, 290px"
+                />
+              </div>
 
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-card-link"
-              dir="ltr"
-            >
-              <span>{project.url.replace("https://", "")}</span>
-              <ExternalLink size={11} className="project-link-icon" />
-            </a>
-          </div>
-        ))}
+              {/* Project Editorial Content */}
+              <div className="project-info-area">
+                <div>
+                  <div className="project-top-meta">
+                    <span className="project-num">PROJECT {project.num}</span>
+                    <span className="project-category-badge">{project.category}</span>
+                  </div>
+
+                  <h3 className="project-headline">{project.title}</h3>
+
+                  <p className="project-problem-text">{project.problemSolved}</p>
+
+                  <ul className="project-tags-row">
+                    {project.tags.map((tag, i) => (
+                      <li key={i} className="project-tag-item">
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="project-links-group">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link-main"
+                  >
+                    <span>معاينة مباشرة</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                  {/* <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link-github"
+                  >
+                    <span>مستودع الكود</span>
+                    <span aria-hidden="true">↗</span>
+                  </a> */}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

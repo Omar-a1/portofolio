@@ -1,87 +1,44 @@
-import { Server, Layout, Code2, Database } from "lucide-react";
-
 export default function AboutSection() {
-  const backendSkills = [
-    "Node.js",
-    "Express.js Framework",
-    "RESTful APIs",
-    "Database Architecture",
-  ];
-
-  const frontendSkills = [
-    "HTML5",
-    "CSS3 (Responsive)",
-    "JavaScript (ES6+)",
-    "React.js",
+  const principles = [
+    {
+      title: "التصميم المريح والمدروس",
+      desc: "الابتعاد عن الزخارف المشتتة والتركيز على التباين البصري السليم والراحة التامة للعين في كل شاشة.",
+    },
+    {
+      title: "كود منظم وقابل للتوسع",
+      desc: "بناء تطبيقات بهياكل واضحة ووثائق نظيفة تسمح بتطوير المشروع وصيانته على المدى الطويل بكل سهولة.",
+    },
+    {
+      title: "سرعة التنفيذ والموثوقية",
+      desc: "الالتزام الدقيق بالمواعيد والحلول الهندسية التي تخدم أهداف العمل مباشرة دون تعقيدات زائدة.",
+    },
   ];
 
   return (
-    <section id="about" className="about-section">
-      {/* عنوان القسم */}
-      <h2 className="about-title">. عني .</h2>
+    <section id="about" className="editorial-section">
+      <div className="site-container">
+        <div className="section-label-bar">
+          <span className="section-index-num">01 //</span>
+          <span className="section-label-text">نبذة عني</span>
+        </div>
 
-      {/* نبذة عني */}
-      <div className="about-bio-container">
-        <p className="about-bio-text">
-          عمر، مطور واجهات وتطبيقات متكاملة (Full Stack Developer) شغفي ببرمجة وتصميم
-          المواقع بدأ في سن الثانية عشرة. بفضل رحلتي التعليمية المستمرة،
-          اكتسبت مهارات قوية في تطوير المواقع والأنظمة السحابية، حيث
-          أسعى لتقديم منتجات رقمية عالية الجودة، تتسم بالدقة في التنفيذ وتصميم
-          مريح وسريع ومناسب لأعلى المقاييس العالمية. يسعدني تحويل أفكارك ورؤيتك إلى واقع رقمي
-          متميز.
-        </p>
-      </div>
+        <h2 className="section-heading-main">المسيرة البرمجية وفلسفة العمل</h2>
 
-      {/* طريقة العمل والتقنيات */}
-      <div className="work-method-container">
-        <h3 className="work-method-title">. طريقة العمل والتقنيات .</h3>
-        <p className="work-method-subtitle">
-          أعمل كمطور <span>Full Stack Developer</span> متكامل عبر بناء حلول برمجية قوية بالتقنيات الآتية:
-        </p>
+        <div className="about-editorial-box">
+          <p className="about-paragraph-lead">
+            أنا <strong>عمر عبد الله</strong>، مطور واجهات وتطبيقات متكاملة (Full Stack Developer). بدأت رحلتي في كتابة الكود وتصميم المواقع في سن الثانية عشرة بدافع الشغف الصرف بفهم كيفية بناء الأدوات الرقمية. على مدار سنوات من التعلم المستمر وبناء المشاريع الحقيقية، طورت أسلوب عمل يركز على الجمع بين واجهات مستخدم مريحة وهندسة خلفية متينة. أؤمن أن أفضل البرمجيات هي التي تؤدي وظيفتها بكفاءة هادئة دون تعقيد أو بهرجة مصطنعة.
+          </p>
 
-        <div className="tech-cards-grid">
-          {/* كارت Backend */}
-          <div className="tech-card">
-            <div className="tech-card-header">
-              <div className="tech-card-icon">
-                <Server size={22} />
+          <div className="about-metrics-row">
+            {principles.map((item, index) => (
+              <div key={index} className="metric-item">
+                <span className="metric-val">
+                  <span className="metric-dot" />
+                  <span>{item.title}</span>
+                </span>
+                <p className="metric-desc">{item.desc}</p>
               </div>
-              <div>
-                <h4 className="tech-card-title">Backend Development</h4>
-                <p className="tech-card-desc">الأنظمة الخلفية وقواعد البيانات وإدارة الـ APIs</p>
-              </div>
-            </div>
-
-            <ul className="tech-badges-list">
-              {backendSkills.map((skill, index) => (
-                <li key={index} className="tech-badge">
-                  <span className="tech-badge-dot" />
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* كارت Frontend */}
-          <div className="tech-card">
-            <div className="tech-card-header">
-              <div className="tech-card-icon">
-                <Layout size={22} />
-              </div>
-              <div>
-                <h4 className="tech-card-title">Frontend Development</h4>
-                <p className="tech-card-desc">بناء واجهات مستخدم تفاعلية وسريعة الاستجابة</p>
-              </div>
-            </div>
-
-            <ul className="tech-badges-list">
-              {frontendSkills.map((skill, index) => (
-                <li key={index} className="tech-badge">
-                  <span className="tech-badge-dot" />
-                  {skill}
-                </li>
-              ))}
-            </ul>
+            ))}
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import "./globals.css";
 const cairo = Cairo({
   variable: "--font-cairo",
   subsets: ["arabic", "latin"],
-  weight: ["400", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -24,8 +24,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "عمر عبد الله | مطور واجهات وتطبيقات Full Stack",
-  description: "معرض أعمال ومشاريع عمر عبد الله - مبرمج ومصمم مواقع وتطبيقات ويب متكاملة",
+  title: "عمر عبد الله | مطور واجهات وتطبيقات متكاملة",
+  description: "الموقع الشخصي ومعرض أعمال عمر عبد الله - مطور Full Stack متكامل ومصمم واجهات حديثة ومريحة للعين.",
   icons: {
     icon: [
       { url: "/images/hero-avatar.png" },
@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className="scroll-smooth">
       <body
-        className={`${cairo.variable} ${tajawal.variable} ${inter.variable} antialiased selection:bg-[#59018c] selection:text-white bg-[#242424] text-white`}
+        className={`${cairo.variable} ${tajawal.variable} ${inter.variable}`}
       >
         {children}
       </body>
