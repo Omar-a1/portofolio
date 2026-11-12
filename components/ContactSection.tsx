@@ -90,7 +90,7 @@ export default function ContactSection() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="أدخل اسمك الكريم"
+                  placeholder="أدخل اسمك"
                   className="clean-input"
                 />
               </div>

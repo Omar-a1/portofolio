@@ -1146,13 +1146,13 @@ nextjs-portal,
   color: #FFFFFF;
   font-size: 14.5px;
   font-weight: 700;
-  transition: all var(--trans-fast);
+  transition: all var(--trans-smooth) ;
 }
 
 .btn-form-submit:hover:not(:disabled) {
   background-color: var(--accent-plum-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 1px 6px rgba(124, 58, 237, 0.3);
 }
 
 .btn-form-submit:disabled {
@@ -1198,4 +1198,23 @@ nextjs-portal,
 
 .footer-copy-text {
   color: var(--text-muted);
+}
+/* scroll bar */
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track{
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb{
+  background: var(--accent-plum);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: var(--accent-plum-hover);
+}
+/* remove blue highlight on mobile */
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
 }
