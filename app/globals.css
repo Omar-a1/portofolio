@@ -271,8 +271,8 @@ nextjs-portal,
 }
 
 .nav-cta-btn.active {
-  background-color: var(--accent-plum-hover);
-  border-color: var(--accent-amber-warm);
+  background-color: #5B21B6;
+  border-color: #5B21B6;
 }
 
 /* Mobile Hamburger Button */

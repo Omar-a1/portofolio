@@ -38,7 +38,7 @@ export default function ContactSection() {
       <div className="site-container">
         <div className="section-label-bar">
           <span className="section-index-num">04 //</span>
-          <span className="section-label-text">قنوات الاتصال</span>
+          <span className="section-label-text">تواصل معي</span>
         </div>
 
         <h2 className="section-heading-main">بدء محادثة عمل</h2>
