@@ -9,7 +9,7 @@
   --bg-main:          #0B090A;
   --bg-surface:       #161A1D;
   --bg-surface-soft:  #171C1A;
-  --bg-surface-hover: #1C2320;
+  --bg-surface-hover: #040F16;
 
   /* ── Text & Typography ── */
   --text-primary:     #F8FAFC;
@@ -17,7 +17,7 @@
   --text-dim:         #64748B;
 
   /* ── Functional Structural Borders ── */
-  --border-divider:   #1E2421;
+  --border-divider:   #343A40;
   --border-light:     #2A3530;
   --border-plum:      rgba(124, 58, 237, 0.4);
 
@@ -165,8 +165,8 @@ nextjs-portal,
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: var(--bg-surface);
-  backdrop-filter: blur(5px);
+  background-color: var(--bg-surface-soft);
+  backdrop-filter: blur(9px);
   /* -webkit-backdrop-filter: blur(12px); */
   border-bottom: 1px solid var(--border-divider); 
   border-raduis: 5px
