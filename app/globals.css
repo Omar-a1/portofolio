@@ -7,8 +7,8 @@
 :root {
   /* ── Matte Solid Backgrounds ── */
   --bg-main:          #0B090A;
-  --bg-surface:       #161A1D;
-  --bg-surface-soft:  #000103;
+  --bg-surface:       #18181B
+  --bg-surface-soft:  #E1E22;
   --bg-surface-hover: #040F16;
 
   /* ── Text & Typography ── */
@@ -165,10 +165,10 @@ nextjs-portal,
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: var(--bg-surface-soft);
-  backdrop-filter: blur(9px);
+  background-color: rgba(18, 18, 20, 0.8);
+  backdrop-filter: blur(12px);
   /* -webkit-backdrop-filter: blur(12px); */
-  border-bottom: 1px solid var(--border-divider); 
+  border-bottom: 0.5px solid var(--border-divider); 
   border-raduis: 5px
   transition: all var(--trans-fast);
 }
