@@ -7,9 +7,9 @@
 :root {
   /* ── Matte Solid Backgrounds ── */
   --bg-main:          #0B090A;
-  --bg-surface:       #161A1D
-  --bg-surface-soft:  #E1E22;
-  --bg-surface-hover: #040F16;
+  --bg-surface:       #181E24;
+  --bg-surface-soft:  #212830;
+  --bg-surface-hover: #262E38;
 
   /* ── Text & Typography ── */
   --text-primary:     #F8FAFC;
@@ -169,7 +169,7 @@ nextjs-portal,
   backdrop-filter: blur(12px);
   /* -webkit-backdrop-filter: blur(12px); */
   border-bottom: 0.5px solid var(--border-divider); 
-  border-raduis: 5px
+  border-radius: 5px;
   transition: all var(--trans-fast);
 }
 
